@@ -1,0 +1,69 @@
+bg_workshops = {
+	
+	category = urban
+
+	land_usage = urban
+
+	always_possible = yes
+
+	auto_place_buildings = yes
+	
+	lens = development
+
+	always_self_owning = yes
+
+	economy_of_scale = no
+
+	default_building = building_workshops
+
+	cash_reserves_max = 1000
+}
+
+bg_cafe = {
+	
+	category = urban
+
+	land_usage = urban
+
+	always_possible = yes
+
+	auto_place_buildings = yes
+	
+	lens = development
+
+	always_self_owning = yes
+
+	economy_of_scale = no
+
+	default_building = building_cafe
+
+	cash_reserves_max = 1000
+}
+
+bg_houses = {
+
+parent_group = bg_urban_facilities
+
+	category = urban
+	
+	auto_place_buildings = no 
+	
+	lens = development
+	
+	# Essencial: Permite que existam donos externos (Acionistas)
+	always_self_owning = no  
+	
+	# Permite uso do Investment Pool privado
+	is_government_funded = no 
+
+	economy_of_scale = yes 
+
+        fired_pops_become_radical = no
+
+	default_building = building_houses 
+
+        infrastructure_usage_per_level = 1
+	
+	# Permite acumular o lucro do aluguel para pagar os dividendos
+	cash_reserves_max = 5000 
+}

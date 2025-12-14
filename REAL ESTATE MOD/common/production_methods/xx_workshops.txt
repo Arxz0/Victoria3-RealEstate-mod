@@ -1,0 +1,447 @@
+pm_workshops_base = {
+	texture = "gfx/interface/icons/production_method_icons/home_workshops.dds"
+
+	building_modifiers = {
+	
+		level_scaled = {
+			building_employment_laborers_add = 35
+			building_employment_machinists_add = 50
+			building_employment_shopkeepers_add = 5
+			building_employment_engineers_add = 10
+			#building_employment_capitalists_add = 1
+		}
+		
+		workforce_scaled = {
+			#input
+			goods_input_wood_add = 1
+			goods_input_hardwood_add = 0.5
+			goods_input_fabric_add = 1
+			goods_input_dye_add = 0.25
+			goods_input_silk_add = 0.25
+			goods_input_iron_add = 0.5
+			goods_input_steel_add = 0.25
+			
+			#output		
+			goods_output_furniture_add = 1
+			goods_output_luxury_furniture_add = 0.25
+			goods_output_clothes_add = 1
+			goods_output_luxury_clothes_add = 0.25
+			goods_output_glass_add = 0.1
+			goods_output_tools_add = 2
+			goods_output_paper_add = 0.5
+			goods_output_small_arms_add = 0.1
+		}		
+	}
+	
+	state_modifiers = {
+	
+		workforce_scaled = {
+			state_pop_qualifications_mult = 0.05
+			state_trade_capacity_add = 1
+		}
+	}
+}
+
+pm_workshops_banned = {
+	texture = "gfx/interface/icons/production_method_icons/no_home_workshops.dds"
+	unlocking_laws = {
+		law_industry_banned
+		law_command_economy
+	}
+
+	building_modifiers = {	
+
+		level_scaled = {
+			building_employment_laborers_add = 20
+			building_employment_machinists_add = 30
+		}
+		
+		workforce_scaled = {
+			#input
+			goods_input_wood_add = 1
+			goods_input_hardwood_add = 0.25
+			goods_input_fabric_add = 0.5
+			goods_input_dye_add = 0.25
+			
+			#output		
+			goods_output_furniture_add = 0.5
+			goods_output_clothes_add = 0.5
+			goods_output_tools_add = 0.5
+			goods_output_paper_add = 0.25
+		}
+	}
+}
+
+pm_workshops_nosubsidies = {
+	texture = "gfx/interface/icons/production_method_icons/no_serfdom.dds"
+}
+
+pm_workshops_subsidies = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	unlocking_laws = {
+		law_cooperative_ownership
+		law_command_economy
+		law_interventionism
+		law_wage_subsidies
+		law_old_age_pension
+		law_worker_protections
+	}
+	
+	building_modifiers = {
+		unscaled = {
+			building_throughput_add = 0.15
+			building_minimum_wage_mult = 0.15
+		}
+	}
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_expenses_add = 10
+		}
+	}
+}
+
+pm_cafe_base = {
+	texture = "gfx/interface/icons/production_method_icons/cafe.dds"
+	disallowing_laws = {
+		#law_command_economy
+	}
+
+	building_modifiers = {
+	
+		level_scaled = {
+			building_employment_laborers_add = 85
+			building_employment_shopkeepers_add = 15
+			#building_employment_capitalists_add = 1
+		}
+	
+		workforce_scaled = {
+			#input
+			goods_input_grain_add = 2
+			goods_input_sugar_add = 0.25
+			goods_input_fruit_add = 1
+			goods_input_meat_add = 0.25
+			goods_input_fish_add = 0.25
+			goods_input_tea_add = 0.25
+			goods_input_coffee_add = 0.25
+			goods_input_wine_add = 0.25
+			goods_input_liquor_add = 0.25
+			
+			#output		
+			goods_output_groceries_add = 5
+		}
+	}
+	
+	state_modifiers = {
+		
+		workforce_scaled = {
+			state_food_security_add = 0.002
+		}
+		unscaled = {
+			#state_food_security_add = 0.2
+		}
+	}
+}
+
+pm_cafe_state = {
+	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
+	unlocking_laws = {
+		law_command_economy
+	}
+
+	building_modifiers = {
+	
+		level_scaled = {
+			building_employment_laborers_add = 80
+			building_employment_shopkeepers_add = 10
+			building_employment_clerks_add = 10
+		}
+	
+		workforce_scaled = {
+			#input
+			goods_input_grain_add = 3
+			goods_input_sugar_add = 0.25
+			goods_input_fruit_add = 2
+			goods_input_meat_add = 0.5
+			goods_input_fish_add = 0.5
+			goods_input_tea_add = 0.5
+			
+			#output		
+			goods_output_groceries_add = 5
+		}
+	}
+	
+	state_modifiers = {
+	
+		unscaled = {
+			state_lower_strata_standard_of_living_add = 1
+			state_food_security_add = 0.15
+			state_assimilation_mult = 0.01
+		}
+	}
+}
+
+pm_cafe_uncontrolled = {
+	texture = "gfx/interface/icons/production_method_icons/unused/propaganda_posters.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_assimilation_mult = 0.002
+			state_political_strength_from_wealth_mult = -0.002
+			state_radicals_from_political_movements_mult = 0.002
+			state_radicals_and_loyalists_from_sol_change_mult = 0.002
+		}
+	}
+}
+
+pm_cafe_suppressed = {
+	texture = "gfx/interface/icons/production_method_icons/unused/no_philosophy_dept.dds"
+	unlocking_laws = {
+		law_national_guard
+		law_secret_police
+		law_dedicated_police
+		law_militarized_police
+	}
+	
+	disallowing_laws = {
+		law_guaranteed_liberties
+		law_right_of_assembly
+		law_protected_speech
+	}
+	
+	building_modifiers = {
+	
+		unscaled = {
+			building_throughput_add = -0.1
+		}
+	}
+	
+	state_modifiers = {
+	
+		level_scaled = {
+			state_tax_capacity_add = -1
+		}
+		
+		unscaled = {
+			state_bureaucracy_population_base_cost_factor_mult = 0.1
+		}
+	}
+}
+
+# --- BASE: O PRÉDIO (Gera a Renda) ---
+pm_houses = {
+	texture = "gfx/interface/icons/production_method_icons/urban_center.dds"
+
+	building_modifiers = {	
+		level_scaled = {
+			# Funcionários (Zeladores, Porteiros)
+			building_employment_laborers_add = 40
+			building_employment_clerks_add = 10
+		}
+
+
+		workforce_scaled = {
+			# Custos de Manutenção
+			goods_input_tools_add = 10
+			goods_input_glass_add = 10
+			
+			# O "ALUGUEL": Venda de Serviços para os Pops.
+			goods_output_services_add = 15 
+		}
+	}
+}
+
+pm_houses_heating_base = {
+	texture = "gfx/interface/icons/production_method_icons/home_workshops.dds"
+
+	building_modifiers = {
+	
+		level_scaled = {
+			#input
+			goods_input_wood_add = 20
+			goods_input_coal_add = 10			
+		}
+	}
+	
+	state_modifiers = {
+	
+		workforce_scaled = {
+			state_lower_strata_standard_of_living_add = 0.1
+			state_middle_strata_standard_of_living_add = 0.1
+		}
+		
+		level_scaled = {
+			state_pollution_generation_add = 5
+		}
+	}
+}
+
+pm_houses_heating_central = {
+	texture = "gfx/interface/icons/production_method_icons/coal_fired_plant.dds"
+	unlocking_technologies = {
+		steam_turbine
+	}
+
+	building_modifiers = {
+	
+		level_scaled = {
+			#input
+			goods_input_electricity_add = 1
+			goods_input_iron_add = 1
+			goods_input_steel_add = 1
+		}
+	}
+	
+	state_modifiers = {
+	
+		workforce_scaled = {
+			state_lower_strata_standard_of_living_add = 0.1
+			state_middle_strata_standard_of_living_add = 0.1
+		}
+		
+		level_scaled = {
+			state_infrastructure_add = -1
+		}
+		
+		unscaled = {
+			state_lower_strata_standard_of_living_add = 0.25
+			state_middle_strata_standard_of_living_add = 0.5
+			building_power_plant_throughput_add = 0.15
+		}
+	}
+	
+	required_input_goods = electricity
+}
+
+pm_houses_no_landscaping = {
+	texture = "gfx/interface/icons/production_method_icons/no_serfdom.dds"
+}
+
+pm_houses_landscaping = {
+	texture = "gfx/interface/icons/production_method_icons/homesteading.dds"
+	unlocking_technologies = {
+		romanticism
+		intensive_agriculture
+	}
+
+	building_modifiers = {
+	
+		level_scaled = {
+			#input
+			goods_input_fertilizer_add = 1			
+		}
+	}
+	
+	state_modifiers = {
+		
+		level_scaled = {
+			state_pollution_generation_add = -5
+		}
+		
+		unscaled = {
+			state_pollution_reduction_health_mult = -0.05
+		}
+	}
+	
+}
+
+pm_houses_nosubsidies = {
+	texture = "gfx/interface/icons/production_method_icons/no_serfdom.dds"
+	disallowing_laws = {
+		law_cooperative_ownership
+		law_command_economy
+	}
+}
+
+pm_houses_subsidies = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	unlocking_laws = {
+		law_cooperative_ownership
+		law_command_economy
+		law_interventionism
+		law_wage_subsidies
+		law_old_age_pension
+		law_worker_protections
+	}
+	
+	building_modifiers = {
+		unscaled = {
+			building_minimum_wage_mult = 0.3
+		}
+	}
+	
+	state_modifiers = {
+		unscaled = {
+			state_lower_strata_standard_of_living_add = 0.25
+			state_middle_strata_standard_of_living_add = 0.5
+		}
+	}
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_expenses_add = 50
+		}
+	}
+	
+
+}
+
+# --- SISTEMA CAPITALISTA COM IPTU ---
+# O lucro é dividido entre os donos privados, mas o Governo morde uma parte (IPTU).
+
+pm_houses_ownership_capitalist = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# Emprega os 'Locadores' para receberem os dividendos
+			building_employment_capitalists_add = 20
+			building_employment_aristocrats_add = 20
+			building_employment_shopkeepers_add = 20
+			building_employment_clergymen_add = 20
+		}
+	}
+
+	ownership_modifiers = {
+		workforce_scaled = {
+			# --- SETOR PRIVADO (Os Locadores) ---
+			# Total de shares privadas: 1100 ações
+			building_ownership_shares_capitalists_add = 500  # O Grande Investidor
+			building_ownership_shares_aristocrats_add = 300  # O Dono do Terreno
+			building_ownership_shares_shopkeepers_add = 200  # O Pequeno Proprietário
+			building_ownership_shares_clergymen_add = 100    # A Igreja
+			
+			# --- O GOVERNO (IPTU) ---
+			# Adicionamos 150 shares para o governo.
+			# Matemática: 150 de um total de 1250 shares = 12% de Imposto.
+			# Esse dinheiro vai direto para o Tesouro como "Dividendos Estatais".
+			building_government_shares_add = 150 
+		}
+	}
+}
+
+# --- SISTEMA SOVIÉTICO (Estatal) ---
+# Sem donos privados. O Governo fica com 100% do lucro.
+
+pm_houses_ownership_state = {
+	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
+	
+	unlocking_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# Burocrata para administrar a habitação social
+			building_employment_bureaucrats_add = 20
+		}
+	}
+
+	ownership_modifiers = {
+		# O Estado é dono único
+		unscaled = {
+			building_government_shares_add = 1000
+		}
+	}
+}

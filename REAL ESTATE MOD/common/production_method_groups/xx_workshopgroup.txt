@@ -1,0 +1,71 @@
+pmg_workshops_base = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_workshops_base
+		pm_workshops_banned
+	}
+}
+
+pmg_workshops_subsidies = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+		pm_workshops_nosubsidies
+		pm_workshops_subsidies
+	}
+}
+
+pmg_cafe_base = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+		pm_cafe_base
+		#pm_cafe_state
+	}
+}
+
+pmg_cafe_control = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_cafe_uncontrolled
+		pm_cafe_suppressed
+	}
+}
+
+pmg_houses = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_houses
+	}
+}
+
+pmg_houses_heating = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_houses_heating_base
+		pm_houses_heating_central
+	}
+}
+
+pmg_houses_landscaping = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_houses_no_landscaping
+		pm_houses_landscaping
+	}
+}
+
+pmg_houses_subsidies = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+		pm_houses_nosubsidies
+		pm_houses_subsidies
+	}
+}
+
+# --- NOVO GRUPO DE PROPRIEDADE PARA ALUGUEL/IMÓVEIS ---
+pmg_houses_ownership = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+		pm_houses_ownership_capitalist
+		pm_houses_ownership_state
+	}
+}

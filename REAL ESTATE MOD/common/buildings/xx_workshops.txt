@@ -1,0 +1,86 @@
+building_workshops = {
+	building_group = bg_workshops
+	icon = "gfx/interface/icons/building_icons/workshops.dds"
+	city_type = city
+
+	unlocking_technologies = {
+		urbanization
+	}
+
+	production_method_groups = {
+		pmg_workshops_base
+		pmg_workshops_subsidies
+	}
+	
+	economic_contribution = 0.5
+	buildable = no
+	expandable = no
+	downsizeable = no
+	can_switch_owner = no
+	generates_residences = no
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
+}
+
+building_cafe = {
+	building_group = bg_cafe
+	icon = "gfx/interface/icons/building_icons/cafes.dds"
+	city_type = city
+
+	unlocking_technologies = {
+		urbanization
+	}
+
+	production_method_groups = {
+		pmg_cafe_base
+		pmg_cafe_control
+	}
+	
+	economic_contribution = 0.25
+	buildable = no
+	expandable = no
+	downsizeable = no
+	can_switch_owner = no
+	generates_residences = no
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+building_houses = {
+	building_group = bg_houses
+	icon = "gfx/interface/icons/building_icons/houses.dds" 
+        city_type = city
+	levels_per_mesh = 50
+
+ai_nationalization_desire = -10 # AI is generally fine with privatizing consumer goods industries
+
+	unlocking_technologies = {
+		manufacturies
+	}
+
+required_construction = construction_cost_medium
+
+inheritable_construction =  yes
+
+urbanization = 5
+
+	production_method_groups = {
+		pmg_houses 
+		pmg_houses_heating 
+		pmg_houses_landscaping 
+		pmg_houses_subsidies
+		pmg_houses_ownership # NOVO GRUPO DE PROPRIEDADE
+	}
+	
+	economic_contribution = 0.5 
+	
+	# === CORREÇÃO CRÍTICA ===
+	buildable = yes        # AGORA É CONSTRUÍVEL MANUALMENTE
+	expandable = yes       # PODE SER AMPLIADO
+	downsizeable = yes     # PODE SER REDIMENSIONADO
+	# ========================
+	
+	can_switch_owner = yes # O dono pode ser mudado
+	generates_residences = no
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
+}
