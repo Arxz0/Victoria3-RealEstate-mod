@@ -1,9 +1,26 @@
-# Victoria 3 - Real Estate Mod (Configuration Logic)
+# 🏙️ Victoria 3 Mod: Urban Housing & Real Estate Market
 
-This repository contains the source files (mostly YAML/TXT config files) for a custom mod developed for the strategy game Victoria 3.
+**Project Status:** Active / Playable
+**Focus:** Economic Simulation, Scripting, Game Balance.
 
-## 🛠 Technical Focus
+## 📖 About the Project
+This mod introduces a comprehensive **Real Estate Market simulation** to Victoria 3, filling a gap in the base game's urban mechanics. It implements a dual-system economy for housing based on the player's political choices.
 
-* **Configuration Syntax:** Experience editing complex nested YAML and TXT files, ensuring strict syntax compliance to prevent game crashes (log analysis).
-* **Software Logic:** Understanding how changes in configuration variables (e.g., resource prices, construction costs) impact the execution of the game's economic engine.
-* **Version Control:** Using Git to manage different iterations and test versions of the mod.
+### Key Mechanics Implemented:
+* **Housing Estates (Conjuntos Habitacionais):** A new building type constructed by the State (Player) to manage urban density.
+* **Capitalist Real Estate Market:** Under capitalist laws, the mod simulates **real estate speculation**. Middle-class and Capitalist pops can invest in these buildings, generating wealth through buying/selling dynamics.
+* **Socialist Housing Policy:** Includes a toggleable "Production Method" where ownership is fully state-controlled, redirecting 100% of the profits (rents) directly to the Government treasury.
+* **Taxation System (IPTU):** Custom scripted modifiers that simulate a Property Tax, adding a new revenue stream and balancing the profitability of real estate assets.
+
+---
+
+## 🛠️ Technical Implementation (Under the Hood)
+
+To achieve this simulation, I had to reverse-engineer and modify several core game files:
+
+* **Production Methods (`.txt`/`.json`):** Created custom logic trees that switch asset ownership based on active laws (Capitalism vs. Socialism).
+* **Modifiers & Math:** Balanced the math behind the "IPTU" tax rate to ensure it didn't crash the in-game economy, requiring analysis of income variables.
+* **Building Logic:** Defined new asset classes that interact with the game's existing Pop (Population) investment pool.
+
+---
+*This project demonstrates my ability to understand complex economic systems and translate them into code logic via configuration files.*
