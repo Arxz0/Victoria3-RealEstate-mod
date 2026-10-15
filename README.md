@@ -23,4 +23,4 @@ To achieve this simulation, I had to reverse-engineer and modify several core ga
 * **Building Logic:** Defined new asset classes that interact with the game's existing Pop (Population) investment pool.
 
 ---
-*This project demonstrates my ability to understand complex economic systems and translate them into code logic via configuration files.*
+*This project demonstrates the skills to understand real economic systems and translate them into code logic via configuration files.*
